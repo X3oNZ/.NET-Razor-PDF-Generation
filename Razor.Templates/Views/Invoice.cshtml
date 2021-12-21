@@ -1,0 +1,110 @@
+﻿@model Razor.Templates.ViewModels.InvoiceViewModel
+
+@{
+	Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Invoice</title>
+
+	<style>
+	.invoice-box{max-width:800px;margin:auto;padding:30px;font-size:16px;line-height:24px;font-family:'Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;color:#555}.invoice-box table{width:100%;line-height:inherit;text-align:left}.invoice-box table td{padding:5px;vertical-align:top}.invoice-box table tr td:nth-child(2){text-align:right}.invoice-box table tr.top table td{padding-bottom:20px}.invoice-box table tr.top table td.title{font-size:45px;line-height:45px;color:#333}.invoice-box table tr.information table td{padding-bottom:40px}.invoice-box table tr.heading td{background:#eee;border-bottom:1px solid #ddd;font-weight:700}.invoice-box table tr.details td{padding-bottom:20px}.invoice-box table tr.item td{border-bottom:1px solid #eee}.invoice-box table tr.item.last td{border-bottom:none}.invoice-box table tr.total td:nth-child(2){border-top:2px solid #eee;font-weight:700}
+	</style>
+	</head>
+<body>
+	<div class="invoice-box">
+		<table cellpadding="0" cellspacing="0">
+			<tr class="top">
+				<td colspan="2">
+					<table>
+						<tr>
+							<td class="title">
+								<img src="data:image/webp;base64,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" alt="Logo" />
+							</td>
+							
+							<td>
+								<b>Invoice #</b>@Model.Id<br>
+								<b>Created</b> @Model.CreatedAt.ToString("d")<br>
+								<b>Due</b> @Model.Due.ToString("d")
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr class="information">
+				<td colspan="2">
+					<table>
+						<tr>
+							<td>
+								Happy Duck Co.<br>
+								Quack Street 21<br>
+								Duckyquacky, 01-111
+							</td>
+							
+							<td>
+								@Model.CompanyName<br>
+								@Model.AddressLine<br>
+								@Model.City, @Model.ZipCode
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr class="heading">
+				<td>
+					Payment Method
+				</td>
+				
+				<td>
+					Amount
+				</td>
+			</tr>
+			
+			<tr class="details">
+				<td>
+					@Model.PaymentMethod
+				</td>
+				
+				<td>
+					$@Model.Amount.ToString("F2")
+				</td>
+			</tr>
+			
+			<tr class="heading">
+				<td>
+					Item
+				</td>
+				
+				<td>
+					Price
+				</td>
+			</tr>
+			@foreach (var item in Model.Items)
+			{
+				<tr class="item">
+					<td>
+						@item.Name
+					</td>
+				
+					<td>
+					   $@item.Amount.ToString("F2")
+					</td>
+				</tr>
+			}
+			
+			<tr class="total">
+				<td></td>
+				
+				<td>
+				   Total: $@Model.Amount
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
