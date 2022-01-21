@@ -1,0 +1,115 @@
+
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Invoice</title>
+	
+	<link rel="stylesheet" href="/_content/Razor.Templates/css/bootstrap.min.css" />
+	<script src="/_content/Razor.Templates/js/bootstrap.bundle.min.js"></script>
+
+	<style>
+	.invoice-box{max-width:800px;margin:auto;padding:30px;font-size:16px;line-height:24px;font-family:'Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;color:#555}.invoice-box table{width:100%;line-height:inherit;text-align:left}.invoice-box table td{padding:5px;vertical-align:top}.invoice-box table tr td:nth-child(2){text-align:right}.invoice-box table tr.top table td{padding-bottom:20px}.invoice-box table tr.top table td.title{font-size:45px;line-height:45px;color:#333}.invoice-box table tr.information table td{padding-bottom:40px}.invoice-box table tr.heading td{background:#eee;border-bottom:1px solid #ddd;font-weight:700}.invoice-box table tr.details td{padding-bottom:20px}.invoice-box table tr.item td{border-bottom:1px solid #eee}.invoice-box table tr.item.last td{border-bottom:none}.invoice-box table tr.total td:nth-child(2){border-top:2px solid #eee;font-weight:700}
+	</style>
+	</head>
+<body>
+	<div class="invoice-box">
+		<table cellpadding="0" cellspacing="0">
+			<tr class="top">
+				<td colspan="2">
+					<table>
+						<tr>
+							<td class="title">
+							<img src="/_content/Razor.Templates/img/ms.png" />	
+							</td>
+							
+							<td>
+								<b>Invoice #</b>12533<br>
+								<b>Created</b> 21-Jan-22<br>
+								<b>Due</b> 31-Jan-22
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr class="information">
+				<td colspan="2">
+					<table>
+						<tr>
+							<td>
+								Happy Duck Co.<br>
+								Quack Street 21<br>
+								Duckyquacky, 01-111
+							</td>
+							
+							<td>
+								Jumping Rabbit Co.<br>
+								Jumpy St. 99<br>
+								Trampoline, 22-113
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr class="heading">
+				<td>
+					Payment Method
+				</td>
+				
+				<td>
+					Amount
+				</td>
+			</tr>
+			
+			<tr class="details">
+				<td>
+					Check
+				</td>
+				
+				<td>
+					$1853.98
+				</td>
+			</tr>
+			
+			<tr class="heading">
+				<td>
+					Item
+				</td>
+				
+				<td>
+					Price
+				</td>
+			</tr>
+				<tr class="item">
+					<td>
+						Website design
+					</td>
+				
+					<td>
+					   $621.99
+					</td>
+				</tr>
+				<tr class="item">
+					<td>
+						Website creation
+					</td>
+				
+					<td>
+					   $1231.99
+					</td>
+				</tr>
+			
+			<tr class="total">
+				<td></td>
+				
+				<td>
+				   Total: $1853.98
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

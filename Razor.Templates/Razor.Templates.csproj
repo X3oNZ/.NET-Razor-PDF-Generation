@@ -5,12 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <RazorCompileOnBuild>true</RazorCompileOnBuild>
+    <EmbedRazorGenerateSources>true</EmbedRazorGenerateSources>
   </PropertyGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-
-
 
 </Project>
